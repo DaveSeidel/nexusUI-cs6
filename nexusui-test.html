@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="jquery-2.1.1.js"></script>
+  <script src="nexusUI.js"></script>
+
+  <script>
+    // mock csoundApp instance for testing
+    var csoundApp = {
+      postMessage: function(msg) { console.log(msg); },
+      setControlChannel: function(name, value) { console.log(name + " -> " + value); }
+    };
+
+  </script>
+  <script src="nexusUI-cs6.js"></script>
+
+  <script>
+
+    nx.onload = function() {
+      cs6.init();
+      nx.printOSC();
+
+      num_1.set(1);
+      den_1.set(1);
+      oct_1.set(1);
+      vol_1.set({value: 0});
+    };
+
+  </script>
+</head>
+
+<body>
+  <div id="drone1">
+    <canvas nx="number" id="num_1"></canvas>
+    <canvas nx="number" id="den_1"></canvas>
+    <canvas nx="number" id="oct_1"></canvas>
+    <canvas nx="slider" id="vol_1" hslider="true" height="20" width="200"></canvas>
+  </div>
+  <div id="globals">
+    <canvas nx="number" id="base_freq"></canvas>
+    <canvas nx="select" id="select_waveform" choices="Sine,Saw,Square,Triangle,Prime,Fibonacci,Aymptotic Saw"></canvas>
+  </div>
+  <br><br>
+  <canvas nx="toggle" id="tog_1"></canvas>
+  <canvas nx="button" id="but_1"></canvas>
+  <canvas nx="dial" id="d_1"></canvas>
+  <br>
+  <canvas nx="number" id="num_1"></canvas>
+  <canvas nx="select" id="sel_1" choices="foo,bar,baz,quux"></canvas>
+  <canvas nx="slider" id="sli_1" hslider="true" width="200" height="20"></canvas>
+  <br>
+  <canvas nx="envelope" id="e_1"></canvas>
+  <canvas nx="multislider" id="ms_1"></canvas>
+  <canvas nx="joints" id="j_1"></canvas>
+  <canvas nx="matrix" id="mtx_1"></canvas>
+</body>
+
+</html>
