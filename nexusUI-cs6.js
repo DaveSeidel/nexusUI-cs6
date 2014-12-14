@@ -39,6 +39,9 @@ var cs6 = function() {
       value = parseFloat(msg.data);
     } else if (msg.type == "select") {
       value = msg.index;
+    } else {
+      this.log("WARNING: widget type " + msg.type + " is not yet supported.");
+      return;
     }
 
     this.updateChannel(msg.target, value);
