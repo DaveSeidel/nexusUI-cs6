@@ -12,8 +12,16 @@ See nexusui-test.html for an example that runs in the browser for testing purpos
 ## Usage
 
 1. Load the jQuery, nexusUI, and nexusUI-cs6 libraries.
-2. In your implementation of the nexusUI startup function (nx.onload), initializa the cs6 object.
-3. Give each nexusUI a unique ID, and use those IDs in your Csound code as the names of the corresponding channels. For example, the button widget that you identify as "button1" `<canvas nx="button" id="button1"></canvas>` corresponds to a Csound channel called "button1" `kbut1 = chnget("button1")`
+2. In your implementation of the nexusUI startup function (`nx.onload()`), initialize the cs6 object.
+3. Give each nexusUI a unique ID, and use those IDs in your Csound code as the names of the corresponding channels.
+
+For example, the button widget that you identify as "button1"
+
+    <canvas nx="button" id="button1"></canvas>
+
+corresponds to a Csound channel called "button1"
+
+    kbut1 = chnget("button1")
 
 ### Setup & initialization
 
@@ -30,7 +38,7 @@ See nexusui-test.html for an example that runs in the browser for testing purpos
       </script>
     </head>
 
-### Display
+### Markup
 
     <body>
       <canvas nx="slider" id="slider1"></canvas>
