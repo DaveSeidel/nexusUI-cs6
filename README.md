@@ -63,3 +63,10 @@ Supported NexusUI objects, and what they emit:
 * select: index of selection (0-based)
 
 For definitive documentation on nexusUI, see <http://www.nexusosc.com/api/>.
+
+## TODO
+
+* Connect Csound output channels to widgets, so they can set values.
+* Scaling & conversion routines
+  * e.g., convert 0-1 floats to positive integers with min/max/step)
+  * bind to specific widget/channel ID
