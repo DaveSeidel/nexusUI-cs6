@@ -68,5 +68,5 @@ For definitive documentation on nexusUI, see <http://www.nexusosc.com/api/>.
 
 * Connect Csound output channels to widgets, so they can set values.
 * Scaling & conversion routines
-  * e.g., convert 0-1 floats to positive integers with min/max/step)
+  * e.g., convert 0-1 floats to positive integers with min/max/step
   * bind to specific widget/channel ID
